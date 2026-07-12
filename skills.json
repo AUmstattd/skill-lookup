@@ -1,0 +1,5 @@
+{
+    "Fireball": {"cooldown": 300, "level": 30},
+    "Blink": {"cooldown": 500, "level": 35},
+    "Toxic Rain": {"cooldown": 250, "level": 25}
+}
