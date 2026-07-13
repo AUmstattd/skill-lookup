@@ -2,7 +2,7 @@
 
 This program looks up a skill and prints its name, cooldown, and level.
 
-## Requirements (let me know what makes sense here)
+## Requirements
 
 - Python 3
 
