@@ -8,5 +8,5 @@ def load_data(path):
         print("Could not find the skills. Make sure it's in the same folder")
         return None
     except json.JSONDecodeError:
-        print("skills.json exists but isn't valid JSON")
+        print("skills.json exists but isn't a valid JSON")
         return None
