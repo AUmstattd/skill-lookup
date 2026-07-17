@@ -21,7 +21,11 @@ def ask_llm(prompt):
             {"role": "user", "content": prompt}
         ],
     }
-    response = requests.post(url, headers=headers, json=body)
+    try:
+        response = requests.post(url, headers=headers, json=body)
+    except requests.exceptions.ConnectionError:
+        print("Could not reach the server")
+        return None
     if response.status_code == 200:
         data = response.json()
         return data['content'][0]['text']
