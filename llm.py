@@ -33,5 +33,6 @@ def ask_llm(prompt):
         print(response.status_code, response.text)
         return None
 
-answer = ask_llm("test")
-print(answer)
+if __name__ == "__main__":
+    answer = ask_llm("test")
+    print(answer)
