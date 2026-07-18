@@ -1,8 +1,11 @@
 import requests
 
 def fetch_user(username):
-    response = requests.get(f"https://api.github.com/users/{username}")
-
+    try:
+        response = requests.get(f"https://api.github.com/users/{username}")
+    except requests.exceptions.ConnectionError:
+        print("Could not connect to server")
+        return None
     if response.status_code == 200:
         data = response.json()
         return data
